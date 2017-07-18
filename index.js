@@ -9,7 +9,7 @@ const methodOverride = require('method-override')
 const app = express()
 
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb://localhost:27017/todo-list', {
+mongoose.connect('mongodb://localhost:27017/todolist', {
   useMongoClient: true
 }).then(
   function () { // resolve cb
@@ -27,7 +27,7 @@ app.set('view engine', 'handlebars')
 
 // TODO. include express and body-parser, plugin in the todos controller and start listening
 // my modules middleware
-app.use(express.static('/public'))
+app.use(express.static('public'))
 app.use(methodOverride('_method'))
 app.use(bodyParser.urlencoded({
   extended: true

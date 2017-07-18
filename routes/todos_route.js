@@ -1,7 +1,5 @@
 const express = require('express') // borrow express function, but not running express
-
 const todosController = require('../controllers/todos_controller')
-
 const router = express.Router()
 
 // before
