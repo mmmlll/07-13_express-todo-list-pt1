@@ -22,7 +22,7 @@ router.put('/:id', function (req, res) {
 })
 
 router.delete('/:id', function (req, res) {
-  res.send(`updating a todo with id ${req.params.id}`)
+  res.send(`deleting a todo with id ${req.params.id}`)
 })
 
 module.exports = router

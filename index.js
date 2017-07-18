@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const exphbs = require('express-handlebars')
 const express = require('express')
 const bodyParser = require('body-parser')
+const methodOverride = require('method-override')
 
 // internal module
 const app = express()
@@ -25,7 +26,9 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars')
 
 // TODO. include express and body-parser, plugin in the todos controller and start listening
+// my modules middleware
 app.use(express.static('/public'))
+app.use(methodOverride('_method'))
 app.use(bodyParser.urlencoded({
   extended: true
 }))

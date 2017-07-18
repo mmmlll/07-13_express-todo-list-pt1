@@ -9,8 +9,11 @@
       {{todo.description}} - {{todo.completed}}
     </p>
 
-    <form action="/todos/{{ todo.id }}" method="post">
+    <form action="/todos/{{ todo.id }}?_method=put" method="post">
       <button>Done!</button>
+    </form>
+    <form action="/todos/{{ todo.id }}?_method=delete" method="post">
+      <button>Delete!</button>
     </form>
   </li>
   {{/unless}}
