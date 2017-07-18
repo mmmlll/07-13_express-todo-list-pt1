@@ -17,22 +17,24 @@ function create (params) {
   })
 }
 
-function list () {
+function list (req, res) {
   Todo.find({}, function (err, todos) {
     if (err) {
       console.log(err)
       return
     }
-    res.send('todos/index', {
+
+    console.log(todos)
+    res.render('todos/index', {
       allTodos: todos
     })
   })
 }
 
-function show (id) {
-  Todo.findById(id, function (err, todo) {
+function show (req, res) {
+  Todo.findById(req.params.id, function (err, todo) {
     if (err) return console.log(err)
-    console.log(todo)
+    res.send(todo)
   })
 }
 
