@@ -23,7 +23,9 @@ function list () {
       console.log(err)
       return
     }
-    console.log(todos)
+    res.send('todos/index', {
+      allTodos: todos
+    })
   })
 }
 

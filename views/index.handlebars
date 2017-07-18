@@ -1,0 +1,14 @@
+<h1>all todos list</h1>
+
+{{ allTodos }}
+
+<ul>
+  {{#each allTodos as |todo| }}
+  <li>
+    <h4>{{todo.name}}</h4>
+    <p>
+      {{todo.description}} - {{todo.completed}}
+    </p>
+  </li>
+  {{/each}}
+</ul>

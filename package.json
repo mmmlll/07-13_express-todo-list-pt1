@@ -7,11 +7,14 @@
     "start": "node index.js",
     "test": "node test/todo_tests.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wdi-sg/express-todo-list-pt1.git"
-  },
+  "repository": "git+https://github.com/wdi-sg/express-todo-list-pt1.git",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.11.3",
     "uuid": "^3.0.1"
-  }
+  },
+  "author": "mmmlll <michelle.y.lai@gmail.com>",
+  "license": "MIT"
 }
