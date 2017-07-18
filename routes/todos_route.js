@@ -13,16 +13,10 @@ const router = express.Router()
 router.get('/', todosController.list)
 router.get('/:id', todosController.show)
 
-router.post('/', function (req, res) {
-  res.send('create new todo')
-})
+router.post('/', todosController.create)
 
-router.put('/:id', function (req, res) {
-  res.send(`updating a todo with id ${req.params.id}`)
-})
+router.put('/:id', todosController.onDone)
 
-router.delete('/:id', function (req, res) {
-  res.send(`deleting a todo with id ${req.params.id}`)
-})
+router.delete('/:id', todosController.destroy)
 
 module.exports = router
